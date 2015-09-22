@@ -7,22 +7,22 @@ makeCacheMatrix <- function(x = matrix()) {
         # inv stores the cached inverse matrix
         inv <- NULL
 
-        # Setter for the matrix
+        # Setter for matrix
         set <- function(y) {
                 x <<- y
                 inv <<- NULL
         }
         
-        # Getter for the matrix
+        # Getter for matrix
         get <- function() x
         
-        # Setter for the inverse
+        # Setter for inverse
         setinv <- function(inverse) inv <<- inverse
        
-        # Getter for the inverse
+        # Getter for inverse
         getinv <- function() inv
         
-        # Return the matrix with our newly defined functions
+        # Return the matrix with new defined functions
         list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
